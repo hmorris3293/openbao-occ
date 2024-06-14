@@ -68,7 +68,7 @@
         [openbao]
         localhost ansible_connection=local user=root role='controller and broker'
         {%- for count in range(cluster_size - 1) %}
-        {{ cluster_info.results[count + 1].instance.ipv4[0] }}
+        {{ info.results[count + 1].instance.ipv4[0] }}
         {%- endfor %}
 
   - name: wait for port 22 to become open
