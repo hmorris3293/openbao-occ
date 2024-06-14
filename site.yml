@@ -9,4 +9,4 @@
   roles:
     - common
     - openbao
-    - post
+   # - post
