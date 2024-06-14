@@ -1,0 +1,9 @@
+---
+# main
+
+- name: configure hostname
+  import_tasks: hostname.yml
+
+- name: install openbao
+  import_tasks: install.yml
+  

@@ -1,0 +1,20 @@
+---
+# install openbao in cluster
+
+- name: download openbao {{ openbao_version }}
+  get_url: 
+    url: "{{ openbao_download_link }}"
+    dest: "/tmp/openbao.zip"
+    owner: openbao
+    group: openbao
+    mode: 0644
+
+- name: unzip openbao deb file
+  unarchive:
+    src: "/tmp/openbao.zip"
+    dest: "{{ openbao_deb_file }}"
+
+- name: Install the .deb package
+  apt:
+    deb: "{{ openbao_deb_file }}"
+

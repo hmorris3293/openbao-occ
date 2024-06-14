@@ -1,0 +1,12 @@
+---
+# configure openbao
+- name: configure openbao servers
+  hosts: openbao
+  any_errors_fatal: true
+  user: root
+  vars_files:
+    - group_vars/openbao/vars
+  roles:
+    - common
+    - openbao
+    - post
