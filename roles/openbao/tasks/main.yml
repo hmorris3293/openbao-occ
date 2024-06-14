@@ -6,4 +6,7 @@
 
 - name: install openbao
   import_tasks: install.yml
+
+- name: configure ssl
+  import_tasks: ssl.yml
   

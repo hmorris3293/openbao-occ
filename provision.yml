@@ -16,8 +16,6 @@
       insertafter: EOF
       path: group_vars/openbao/vars
       line: |
-        truststore_password: {{ lookup('password', '/dev/null length=25 chars=ascii_letters,digits') }}
-        keystore_password: {{ lookup('password', '/dev/null length=25 chars=ascii_letters,digits') }}
         ca_password: "{{ lookup('password', '/dev/null length=25 chars=ascii_letters,digits') }}"
         sudo_password: {{ lookup('password', '/dev/null length=25 chars=ascii_letters,digits') }}
     no_log: true

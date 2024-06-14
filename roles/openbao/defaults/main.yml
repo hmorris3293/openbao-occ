@@ -10,3 +10,7 @@ openbao_config_file: /etc/openbao/openbao.hcl
 
 # ssl
 openbao_ssl_directory: /opt/openbao/tls
+openbao_cacert: '/opt/openbao/tls/ca.crt'
+openbao_cekey: '/opt/openbao/tls/ca.key'
+openbao_cert: '/opt/openbao/tls/openbao.crt'
+openbao_key: '/opt/openbao/tls/openbao.key'
